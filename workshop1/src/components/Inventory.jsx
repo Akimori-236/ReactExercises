@@ -1,18 +1,21 @@
+import Button from 'react-bootstrap/Button'
+import ListGroup from 'react-bootstrap/ListGroup'
+
 export function Inventory(props) {
     const items = ["Apple", "Orleng", "Blackberry", "Pineapple"]
     return (
         <div>
             <h1>Please Select</h1>
-            <ul>
+            <ListGroup>
                 {items.map((i) => {
                     return (
-                        <li key={i}>
+                        <ListGroup.Item key={i}>
                             <span>{i}</span>
-                            <button onClick={() => props.addItem(i)}>Add</button>
-                        </li>
+                            <Button variant="outline-primary" onClick={() => props.addItem(i)}>Add</Button>
+                        </ListGroup.Item>
                     )
                 })}
-            </ul>
+            </ListGroup>
         </div>
     );
 }

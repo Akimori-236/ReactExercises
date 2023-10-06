@@ -1,13 +1,16 @@
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
 import { Cart } from "./components/Cart";
 import { Inventory } from "./components/Inventory";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 export default function App() {
     const [cart, setCart] = useState({})
 
     const addItem = (item) => {
-    	// clone the cart
+        // clone the cart
         const updatedCart = { ...cart }
         // +1 item or init to 1
         updatedCart[item] = (updatedCart[item] || 0) + 1
@@ -22,7 +25,7 @@ export default function App() {
         if (updatedCart[item] > 1) {
             updatedCart[item] -= 1
         } else {
-			// remove whole item if not >1
+            // remove whole item if not >1
             delete updatedCart[item]
         }
         // update cart
@@ -31,9 +34,9 @@ export default function App() {
     }
 
     return (
-        <div>
-            <Inventory addItem={addItem} />
-            <Cart cart={cart} removeItem={removeItem} />
-        </div>
+        <Row>
+            <Col><Inventory class="col" addItem={addItem} /></Col>
+            <Col><Cart class="col" cart={cart} removeItem={removeItem} /></Col>
+        </Row >
     )
 }

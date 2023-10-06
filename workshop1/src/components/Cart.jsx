@@ -1,19 +1,22 @@
+import Button from "react-bootstrap/Button"
+import ListGroup from 'react-bootstrap/ListGroup'
+
 export function Cart(props) {
     const cart = props.cart
     const itemList = Object.keys(cart)
     return (
         <div>
             <h1>My Cart</h1>
-            <ul>
+            <ListGroup>
                 {itemList.map(item => {
                     return (
-                        <li key={item}>
+                        <ListGroup.Item key={item}>
                             <span>{item} x {cart[item]}</span>
-                            <button onClick={() => props.removeItem(item)}>Remove</button>
-                        </li>
+                            <Button variant="outline-danger"  onClick={() => props.removeItem(item)}>Remove</Button>
+                        </ListGroup.Item>
                     )
                 })}
-            </ul>
+            </ListGroup>
         </div>
     )
 }
