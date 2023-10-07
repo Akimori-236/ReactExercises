@@ -4,6 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 export function Cart(props) {
     const cart = props.cart
     const itemList = Object.keys(cart)
+    
     return (
         <div>
             <h1>My Cart</h1>

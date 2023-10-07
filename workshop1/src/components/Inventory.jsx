@@ -3,6 +3,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 
 export function Inventory(props) {
     const items = ["Apple", "Orleng", "Blackberry", "Pineapple"]
+    
     return (
         <div>
             <h1>Please Select</h1>
