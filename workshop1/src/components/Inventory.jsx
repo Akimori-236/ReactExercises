@@ -1,9 +1,10 @@
 import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
+import { INVENTORY_LIST } from '../constants';
 
 export function Inventory(props) {
-    const items = ["Apple", "Orleng", "Blackberry", "Pineapple"]
-    
+    const items = INVENTORY_LIST
+
     return (
         <div>
             <h1>Please Select</h1>

@@ -1,0 +1,1 @@
+export const INVENTORY_LIST = ["Apple", "Orleng", "Blackberry", "Pineapple"]
