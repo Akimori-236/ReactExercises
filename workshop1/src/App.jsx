@@ -35,8 +35,8 @@ export default function App() {
 
     return (
         <Row>
-            <Col><Inventory class="col" addItem={addItem} /></Col>
-            <Col><Cart class="col" cart={cart} removeItem={removeItem} /></Col>
+            <Col><Inventory class="col" onAddItem={onAddItem} /></Col>
+            <Col><Cart class="col" cart={cart} onRemoveItem={onRemoveItem} /></Col>
         </Row >
     )
 }

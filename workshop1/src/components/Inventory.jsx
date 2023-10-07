@@ -11,7 +11,7 @@ export function Inventory(props) {
                     return (
                         <ListGroup.Item key={i}>
                             <span>{i}</span>
-                            <Button variant="outline-primary" onClick={() => props.addItem(i)}>Add</Button>
+                            <Button variant="outline-primary" onClick={() => props.onAddItem(i)}>Add</Button>
                         </ListGroup.Item>
                     )
                 })}

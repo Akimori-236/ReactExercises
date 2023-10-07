@@ -12,7 +12,7 @@ export function Cart(props) {
                     return (
                         <ListGroup.Item key={item}>
                             <span>{item} x {cart[item]}</span>
-                            <Button variant="outline-danger"  onClick={() => props.removeItem(item)}>Remove</Button>
+                            <Button variant="outline-danger"  onClick={() => props.onRemoveItem(item)}>Remove</Button>
                         </ListGroup.Item>
                     )
                 })}
