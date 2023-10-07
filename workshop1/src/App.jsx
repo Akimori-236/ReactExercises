@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col'
 export default function App() {
     const [cart, setCart] = useState({})
 
-    const addItem = (item) => {
+    const onAddItem = (item) => {
         // clone the cart
         const updatedCart = { ...cart }
         // +1 item or init to 1
@@ -19,7 +19,7 @@ export default function App() {
         console.log(`Added "${item}" to cart`)
     }
 
-    const removeItem = (item) => {
+    const onRemoveItem = (item) => {
         // clone the cart
         const updatedCart = { ...cart }
         if (updatedCart[item] > 1) {
