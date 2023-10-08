@@ -7,7 +7,12 @@ export function DisplayTasks(props) {
       <div>
         <h1 className='text-warning fw-bold'>Tasks</h1>
         {props.tasks.map((t, index) => (
-          <Task key={index} name={t.name} priority={t.priority} date={t.date} />
+          <Task key={index}
+            index = {index}
+            name={t.name}
+            priority={t.priority}
+            date={t.date}
+            onDeleteTask={props.onDeleteTask} />
         ))}
       </div>
     );

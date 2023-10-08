@@ -16,10 +16,16 @@ function App() {
     setTasks([...tasks, newTask])
   }
 
+  const onDeleteTask = (index) => {
+    const updatedTasks = [...tasks];
+    updatedTasks.splice(index, 1);
+    setTasks(updatedTasks);
+  }
+
   return (
     <div className='container'>
       <TodoForm onAddTask={onAddTask}></TodoForm>
-      <DisplayTasks tasks={tasks}></DisplayTasks>
+      <DisplayTasks tasks={tasks} onDeleteTask={onDeleteTask}></DisplayTasks>
     </div>
   )
 }
