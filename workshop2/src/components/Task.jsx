@@ -7,8 +7,14 @@ export function Task(props) {
             </Row>
             <Row>
                 <Col>{props.priority}</Col>
-                <Col className="ms-auto">{props.date}</Col>
+                <Col className="ms-auto">{formatDate(props.date)}</Col>
             </Row>
         </div>
     )
+}
+
+function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString(undefined, options);
 }
