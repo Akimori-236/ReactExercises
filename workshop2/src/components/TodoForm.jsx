@@ -40,9 +40,11 @@ export function TodoForm(props) {
                     name="duedate"
                 />
             </Form.Group>
-            <Button className="my-3" variant='warning' type='submit'>
-                Add
-            </Button>
+            <div className='text-end'>
+                <Button className="my-3" variant='primary' type='submit'>
+                    Add
+                </Button>
+            </div>
         </Form>
     )
 }
