@@ -8,10 +8,14 @@ import { TodoForm } from './components/TodoForm'
 function App() {
   const [tasks, setTasks] = useState([])
   const onAddTask = (name, priority, date) => {
-    console.log(name)
-    console.log(priority)
-    console.log(date)
+    const newTask = {
+      name: name,
+      priority: priority,
+      date: date,
+    }
+    setTasks([...tasks, newTask])
   }
+
   return (
     <div className='container'>
       <TodoForm onAddTask={onAddTask}></TodoForm>
