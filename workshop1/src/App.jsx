@@ -1,5 +1,4 @@
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
 import { Cart } from "./components/Cart";
 import { Inventory } from "./components/Inventory";
